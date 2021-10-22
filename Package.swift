@@ -11,16 +11,9 @@ let package = Package(
             targets: ["McuManager"]
         ),
     ],
-    dependencies: [
-        .package(
-            url: "https://github.com/unrelentingtech/SwiftCBOR.git", 
-            .branch("master")
-        ),
-    ],
     targets: [
         .target(
             name: "McuManager",
-            dependencies: ["SwiftCBOR"],
             path: "Source",
             exclude:["Info.plist"]
         )
